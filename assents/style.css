@@ -9,8 +9,13 @@
 :root{
    --background-basic-color-light:#ffffff;
    --background-basic-color-dark:#232c35;
+    --title-for-datk-mode:#fff;
 }
 
+
+    
+    
+ 
 
 body
 {
@@ -28,6 +33,7 @@ body.dark
 {
     background: var(--background-basic-color-dark);
 }
+
 
 .checkbox
 {
