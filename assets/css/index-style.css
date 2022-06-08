@@ -9,31 +9,25 @@ box-sizing: border-box;
 
 :root
 
-/*Variaveis de cor para o Modo Dark*/
+    /*Dark Mode*/
 {
     --header-and-footer:  #000000;
     --main-color:         #FFC727;
     --secundary-color:    #6A3FAD;
     --text-color:         #ffffff;
-    --background-color:   #533775;;
+    --background-color:   #533775;
     --logo-color:         #FFC727;
     --input-background:   #6A4A99;
     --linear-grad: linear-gradient(to right, rgb(233, 209, 71) , rgb(201, 35, 216));
-
-
-/*Variaveis de cor para o Modo Light
-
-    --header-and-footer:  #000000;
-    --main-color:         #FFC727;
-    --secundary-color:    #6A3FAD;
-    --text-color:         #ffffff;
-    --background-color:   #533775;;
-    --logo-color:         #FFC727;
-    --input-background:   #6A4A99;
-    --linear-grad: linear-gradient(to right, rgb(233, 209, 71) , rgb(201, 35, 216));
-*/
-
-
+   
+    /*Light Mode*/
+    --header-and-footerlm:  #be3d3d;
+    --main-colorlm:         #229094;
+    --secundary-colorlm:    #6A3FAD;
+    --text-colorlm:         #212121; 
+    --background-colorlm:   #939393; 
+    --logo-colorlm:         #FFC727;
+    --input-backgroundlm:   #6A4A99;
 }
 
 body
@@ -41,6 +35,8 @@ body
     background-color: var(--background-color);
     padding-top: 40px;
 }
+
+/*Start Nav-bar*/
 
 .header-box 
 {
@@ -96,7 +92,6 @@ body
     text-decoration: none;
     font-weight: 100;
     color: white;
-
 }
 
 .signup-btn
@@ -119,9 +114,76 @@ body
     color: var(--background-color);
 
 }
+/*End Nav-bar*/
 
+/*Start Seletor Dark ou Light Mode*/
+#chk-cont
+{
+    width: 100vw;
+    margin-left: -100px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
 
-/*Inicio das Configurações Gerais*/
+.checkbox
+{
+    opacity: 0;
+    position: absolute;
+}
+
+.label
+{
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale(1.0);
+}
+
+.label .ball
+{
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball
+{
+    transform: translateX(24px);
+}
+
+.fa-moon
+{
+    color: #3A4EBA;
+}
+
+.fa-sun
+{
+    color:#f1c40f;
+}
+
+/*End Seletor Dark or Light Mode*/
+
+/*Start Config Generals*/
 .intro-box, .develop-box, .conclusion-box 
 {
     height: 76vh; 
@@ -133,7 +195,6 @@ body
     margin: 33px auto 0px auto;
 }
     
-
 .form-box
 {
     height: 76vh; 
@@ -143,7 +204,6 @@ body
     max-width: 1065px;
     margin: 33px auto 0px auto;
 }
-
 
 .intro-main, .conclusion-main, .develop-main
 {
@@ -221,8 +281,6 @@ body
     height: auto;
 }
 
-
-
 .develop-big-image
 {
     width: 33%;
@@ -285,6 +343,8 @@ body
     max-width: 350px;
     height: auto; 
 }
+/*End Config Generals*/
+
 /*
 .social-media
 {
@@ -302,9 +362,11 @@ body
     margin-top: 33px;
 }
 
+/*Start Scroll-bar*/
 ::-webkit-scrollbar
 {
     width: .5em;
+    height: .5em;
     margin-right: 10px;
 }
 
@@ -316,17 +378,17 @@ body
 ::-webkit-scrollbar-thumb
 {
     background-color: #FFC727;
-   
+    height: .5em;
     width: 0.5em;
     border-radius: 10px;
 }
-
+/*End Scroll-bar*/
 
 /*  align-items direciona no eixo X
     justify-content direciona no eixo Y
 */
 
-
+/*Start Form*/
 .form-main
 {
     display: flex;
@@ -343,7 +405,6 @@ body
     justify-content: center;
     width: 100%;
 }
-
 
 .title-form
 {
@@ -379,7 +440,6 @@ body
     width: 100%;
     padding: 0px 0px 0px 10px;
 }
-
 
 .users-term input
 {
@@ -417,13 +477,12 @@ body
     margin: 20px auto 0px auto;
     cursor: pointer;
 }
-
+/*End Form*/
 .title-footer
 {
     color: var(--main-color);
     margin: 30px 0px 30px 0px;
 }
-
 
 .main-links
 {
