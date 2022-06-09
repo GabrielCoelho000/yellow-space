@@ -42,7 +42,7 @@ body
 {
     height: 7vh; 
     width: 100vw;
-    background-color:  var(--header-and-footer);
+    background-color: var(--header-and-footer);
     color: var(--text-color);
     display: flex;
     position: fixed;
@@ -352,6 +352,31 @@ body
     margin-top: 33px;
 }*/
 
+.social-media-container
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 33px;
+    
+    width: 100vw;
+    height: 30px;
+    
+    background-color: var(--header-and-footer);
+}
+
+.fa-brands
+{
+    margin-left: 2em;
+    color:var(--text-color);
+}
+
+.caption
+{
+    color: var(--text-color);
+}
+
 .footer-box
 {
     display: flex;
@@ -359,7 +384,7 @@ body
     background-color: var(--header-and-footer);
     width: 100vw;
     justify-content: space-around;
-    margin-top: 33px;
+   
 }
 
 /*Start Scroll-bar*/
